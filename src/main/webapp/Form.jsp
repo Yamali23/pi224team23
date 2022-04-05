@@ -10,15 +10,15 @@ pageEncoding="UTF-8"%>
  <body> 
  <h1>Калькулятор - вычисление объема прямоугольного параллелепипеда</h1>> 
    </form> 18 </body> 19 </html>|
-     <form action="${pageContext.request.contextPath}/JavaCalc" method="post">
+     <form action="/JavaCalc" method="doPost">
      
      <label for="first">Сторона а:</label> 
-     <input type="text" name="first" id="first" value="${first}"> 
+     <input type="text" name="first" id="first" value=""> 
      
      <label for="second">Сторона b: 
-     </label> <input type="text" name="second" id="second" value="${second}"> 
+     </label> <input type="text" name="second" id="second" value=""> 
      
      <label for="second">Сторона c: 
-     </label> <input type="text" name="third" id="third" value="${third}"> 
+     </label> <input type="text" name="third" id="third" value=""> 
      
 <input type="submit" name="sign" value="Calculate">

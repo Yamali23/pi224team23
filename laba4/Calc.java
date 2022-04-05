@@ -12,13 +12,21 @@ public class Calc extends HttpServlet {
 		request.getRequestDispatcher("/Results.jsp").forward(request, response);
 	}
 	
+}
+
+public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		PrintWriter out = resp.getWriter();
+		out.println(this.getGreeting());
+		out.close();
+	}
+	
 	private static class RequestCalc {
 		private final String first_calc;
 		private final String second_calc;
 		private final String third_calc;
 		private int result;
 		
-		private RequestCalc (String first, String second) {
+		private RequestCalc (String first, String second, String third) {
 			this.first_calc = first;
 			this.second_calc = second;
 			this.third_calc = third;
