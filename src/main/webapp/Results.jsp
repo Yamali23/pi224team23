@@ -8,6 +8,7 @@
 </head> 
 <body> 
 <h1>Результат вычисления объёма прямоугольного параллелепипеда </h1> 
+<form action="/IS_Laba_4/" method="get">
 <h2>Ваши введеные данные: </h2> 
 <p><strong>a:</strong> ${first}</p> 
 <p><strong>b:</strong> ${second}</p> 

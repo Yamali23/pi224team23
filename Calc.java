@@ -1,6 +1,12 @@
+
 package laba4;
 
 import java.io.IOExeption;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 
 @WEbServlet(name="Calc", urlPatterns="/JavaCalc")
 public class Calc extends HttpServlet {
@@ -9,9 +15,16 @@ public class Calc extends HttpServlet {
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
 		Calc.setAsRequestAttributesAndCalculate(request);
 	
+		System.out.println("rrgrgrgr");		
 		request.getRequestDispatcher("/Results.jsp").forward(request, response);
 	}
 	
+	/*public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+ 		
+ 		PrintWriter out = resp.getWriter();
+ 		out.println(this.getGreeting());
+ 		out.close();
+ 	}*/
 }
 
 public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

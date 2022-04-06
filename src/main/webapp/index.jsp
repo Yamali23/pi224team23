@@ -9,7 +9,7 @@ pageEncoding="UTF-8"%>
  </head> 
  <body> 
  <h1>Калькулятор - вычисление объема прямоугольного параллелепипеда</h1>> 
-     <form action="/IS_Laba_4/" method="post">
+     <form action="/home/aleksandra/apache-tomcat-10.0.20/webapps/IS_Laba_4/JavaCalc" method="post">
      
      <label for="first">Сторона а:</label> 
      <input type="text" name="first" id="first" value=""> 
@@ -21,3 +21,6 @@ pageEncoding="UTF-8"%>
      </label> <input type="text" name="third" id="third" value=""> 
      
 <input type="submit" name="sign" value="Calculate">
+</form>
+</body>
+</html>
