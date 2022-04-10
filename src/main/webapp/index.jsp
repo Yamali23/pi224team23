@@ -9,7 +9,7 @@ pageEncoding="UTF-8"%>
  </head> 
  <body> 
  <h1>Калькулятор - вычисление объема прямоугольного параллелепипеда</h1>> 
-     <form action="/home/aleksandra/apache-tomcat-10.0.20/webapps/IS_Laba_4/JavaCalc" method="post">
+     <form action="${pageContext.request.contextPath}/JavaCalcv" method="post">
      
      <label for="first">Сторона а:</label> 
      <input type="text" name="first" id="first" value=""> 

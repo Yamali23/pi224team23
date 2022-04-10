@@ -1,41 +1,35 @@
-package laba4;
-
-import java.io.IOExeption;
+import java.io.IOException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * Servlet implementation class Calcv
+ */
+@WebServlet(name="Calcv", urlPatterns="/JavaCalcv")
+public class Calcv extends HttpServlet 
+{
+	//private static final long serialVersionUID = 1L;
 
-@WEbServlet(name="Calc", urlPatterns="/JavaCalc")
-public class Calc extends HttpServlet {
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletExeption, IOExeption {
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
 		Calc.setAsRequestAttributesAndCalculate(request);
-	
 		request.getRequestDispatcher("/Results.jsp").forward(request, response);
-	}
-	
-	/*public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
- 		
- 		PrintWriter out = resp.getWriter();
- 		out.println(this.getGreeting());
- 		out.close();
- 	}*/
-}
-
-public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		PrintWriter out = resp.getWriter();
-		out.println(this.getGreeting());
-		out.close();
-	}
+	}  
 	
 	private static class RequestCalc {
 		private final String first_calc;
 		private final String second_calc;
 		private final String third_calc;
-		private int result;
+		private String result;
 		
 		private RequestCalc (String first, String second, String third) {
 			this.first_calc = first;
@@ -46,7 +40,7 @@ public void doGet(HttpServletRequest req, HttpServletResponse resp) throws Servl
 		public static RequestCalc fromRequestParameters(HttpServletRequest request) {
 			return new RequestCalc(
 			request.getParameter("first"),
-			request.getParameter("second")
+			request.getParameter("second"),
 			request.getParameter("third"));
 			}
 			
@@ -61,14 +55,15 @@ public void doGet(HttpServletRequest req, HttpServletResponse resp) throws Servl
 			first_try=Integer.parseInt(first_calc);
 			second_try=Integer.parseInt(second_calc);
 			third_try=Integer.parseInt(third_calc);
+			result=Integer.toString(first_try*second_try*third_try);
 			}
-			catch (NumberFormatExeption e) {
+			catch (NumberFormatException e) {
 				first_try=0;
 				second_try=0;
 				third_try=0;
+			result="Некорректные данные";
 			}
-			result=first_try*second_try*third_try;
-			reqest.setAttribute("result", result);
+			request.setAttribute("result", result);
 		}
 	}
 }
