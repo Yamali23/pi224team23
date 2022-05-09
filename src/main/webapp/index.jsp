@@ -13,13 +13,13 @@ pageEncoding="UTF-8"%>
      
      <label for="first">Сторона а:</label> 
      <input type="text" name="first" id="first" value=""> 
-     
-     <label for="second">Сторона b: 
-     </label> <input type="text" name="second" id="second" value=""> 
-     
-     <label for="second">Сторона c: 
-     </label> <input type="text" name="third" id="third" value=""> 
-     
+     <label> mm;</label> 
+     <label for="second">Сторона b:</label>
+     <input type="text" name="second" id="second" value=""> 
+     <label> mm;</label>
+     <label for="second">Сторона c:</label>
+     <input type="text" name="third" id="third" value=""> 
+     <label> mm.</label>
 <input type="submit" name="sign" value="Calculate">
 </form>
 </body>
