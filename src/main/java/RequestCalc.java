@@ -7,9 +7,9 @@ public class RequestCalc extends Calculations{
 		private String result;
 		
 		public void calc() {
-			int first_try;
-			int second_try;
-			int third_try;
+			Integer first_try = new Integer(0);
+			Integer second_try = new Integer(0);
+			Integer third_try = new Integer(0);
 			try {
 			first_try=Integer.parseInt(first_calc);
 			second_try=Integer.parseInt(second_calc);
