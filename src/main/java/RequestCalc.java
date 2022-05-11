@@ -14,7 +14,14 @@ public class RequestCalc extends Calculations{
 			first_try=Integer.parseInt(first_calc);
 			second_try=Integer.parseInt(second_calc);
 			third_try=Integer.parseInt(third_calc);
-			result=Integer.toString(first_try*second_try*third_try);
+			if((first_try>0)&&(second_try>0)&&(third_try>0))
+			{
+				result=Integer.toString(first_try*second_try*third_try);
+			}
+			else
+			{
+				result="Некорректные данные";
+			}
 			}
 			catch (NumberFormatException e) {
 				first_try=0;
@@ -23,7 +30,6 @@ public class RequestCalc extends Calculations{
 			result="Некорректные данные";
 			}
 		}
-		
 		private RequestCalc (String first, String second, String third) {
 			this.first_calc = first;
 			this.second_calc = second;
