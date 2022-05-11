@@ -10,9 +10,9 @@
 <h1>Результат вычисления объёма прямоугольного параллелепипеда </h1> 
 
 <h2>Ваши введеные данные: </h2> 
-<p><strong>a:</strong> ${first_result} <strong> mm</strong> </p> 
-<p><strong>b:</strong> ${second_result} <strong> mm</strong> </p> 
-<p><strong>c:</strong> ${third_result} <strong> mm</strong> </p> 
-<p><strong>Результат:</strong> ${result} <strong> mm</strong> </p> 
+<p><strong>a:</strong> ${first_result} <strong> мм</strong> </p> 
+<p><strong>b:</strong> ${second_result} <strong> мм</strong> </p> 
+<p><strong>c:</strong> ${third_result} <strong> мм</strong> </p> 
+<p><strong>Результат:</strong> ${result} <strong> мм</strong> </p> 
 </body> 
 </html>
