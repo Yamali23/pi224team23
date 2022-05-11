@@ -11,6 +11,7 @@ pageEncoding="UTF-8"%>
  <h1>Калькулятор - вычисление объема прямоугольного параллелепипеда</h1>> 
      <form action="${pageContext.request.contextPath}/JavaCalcv" method="post">
      
+  
      <label for="first">Сторона а:</label> 
      <input type="text" name="first" id="first" value=""> 
      <label>  мм;</label> 
